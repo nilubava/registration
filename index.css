@@ -2,3 +2,13 @@
 	box-sizing: border-box;
 	margin: 0;
 }
+
+.valid:before {
+	content: "\2714";
+	color: #009E2D;
+}
+
+.invalid:before {
+	content: "\2718";
+	color: #9E0000;
+}
