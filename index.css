@@ -1,14 +1,117 @@
 * {
 	box-sizing: border-box;
 	margin: 0;
+	font-size: 18px;
+	font-family: 'ArialMT';
 }
 
-.valid:before {
+/* Row and columns */
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-between;
+	padding: 32px 8px;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	margin: 0 8px;
+}
+
+/* Input field */
+input {
+	height: 50px;
+	width: 100%;
+	border: 2px solid #000000;
+	margin: 16px 0;
+	padding: 16px;
+}
+
+input[type=text] {
+	margin-right: 5px;
+}
+
+input[type=submit] {
+	background-color: #000000;
+	box-shadow: none;
+	color: #ffffff;
+	cursor: pointer;
+	margin: 0;
+}
+
+input[disabled="true"] {
+	cursor: auto;
+	opacity: 0.75;
+}
+
+/* Registration page specific */
+.registration {
+  height: 100vh;   
+}
+
+.registration-title {
+	background-color: #000000;
+	padding: 16px;    
+	text-align: center;
+	color: #ffffff;
+	width: 100%;
+	height: 60px;
+	font-size: 24px;
+}
+
+.registration-form {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	height: calc(100% - 50px);
+}
+
+.registration-form form {
+	border: 2px solid #000000;
+	align-self: center;
+	width: 75%;
+	min-width: 290px;
+	position: relative;
+}
+
+.registration-form__submit {
+	padding: 0 16px 32px 8px;
+}
+
+.registration-form__password .valid:before {
 	content: "\2714";
 	color: #009E2D;
 }
 
-.invalid:before {
+.registration-form__password .invalid:before {
 	content: "\2718";
 	color: #9E0000;
+}
+
+/* Media queries for tablet and desktop with mobile first approach */
+@media only screen and (min-width : 768px) and (max-width: 991px) {
+	.registration-form__email {
+		order: 2;
+	}
+
+	.registration-form__submit {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+@media only screen and (min-width : 768px) {
+	.column {
+		flex: 1;
+	}
+
+	.registration-form__submit {
+		width: 50%;
+		float: right;
+	}
 }

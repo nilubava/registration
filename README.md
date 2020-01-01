@@ -6,4 +6,4 @@ A registration form written in plain vanilla JS and HTML
  - Open the terminal in the folder and run `cd registration`
  - Run cmd `open ./index.html` to view the form
 
- 
+

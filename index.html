@@ -6,25 +6,32 @@
 		<script src="index.js" defer></script>
 	</head>
 	<body>
-		<form action="/action_page.php">
-				<div>
-					<label for="email">Email</label>
-					<input type="text" id="email" name="email" placeholder="Enter Email">
-				</div>
-				<div>
-					<label for="password">Password</label>
-					<input type="text" id="password" name="password" placeholder="Enter Password">
-					<div id="message">
-						<p id="length" class="invalid"> 8+ characters</p>
-						<p id="letter" class="invalid"> lowercase letter </p>
-						<p id="capital" class="invalid"> uppercase letter</p>
-						<p id="number" class="invalid"> number</p>
-						<p id="special" class="invalid"> special character</p>
+		<div class="registration">
+			<div class="registration-title">Registration</div>
+			<div class="registration-form">
+				<form action="/action_page.php">
+					<div class="row">
+						<div class="column registration-form__email">
+							<label for="email">Email</label>
+							<input type="text" id="email" name="email" placeholder="Enter Email">
+						</div>
+						<div class="column registration-form__password">
+							<label for="password">Password</label>
+							<input type="text" id="password" name="password" placeholder="Enter Password">
+							<div id="message">
+								<p id="length" class="invalid"> 8+ characters</p>
+								<p id="letter" class="invalid"> lowercase letter </p>
+								<p id="capital" class="invalid"> uppercase letter</p>
+								<p id="number" class="invalid"> number</p>
+								<p id="special" class="invalid"> special character</p>
+							</div>
+						</div>
 					</div>
-				</div>
-			<div>
-				<input type="submit" value="Submit" id="submit">
+					<div class="registration-form__submit">
+						<input type="submit" value="Submit" id="submit">
+					</div>
+				</form>
 			</div>
-		</form>
+		</div>
 	</body>
 </html>
